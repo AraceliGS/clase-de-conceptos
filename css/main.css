@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: blue;
+  text-align: right;
+}
+
+/* Especificidad: Valores
+Selector de etiqueta: 1 punto
+Selector de clase: 10 puntos
+Selector de id: 100 puntos
+Etiqueta inline: 1000 puntos
+*/
+
+/* p : especificidad
+id(100) : 0
+clase(10): 0
+etiqueta(1): 1
+Total: 1
+
+*/
+
+/* p.byline : Especificidad 11
+id(100) : 0
+clase(10) : 1
+etiqueta (1) : 1
+
+#banner: Especificidad:100
+id(100) : 1
+clase(10): 0
+etiqueta (1) :0
+
+#banner p : especificidad 101
+
+a:hover especificidad 11
+
+id(100):0
+clase(10):1
+etiqueta(1):1
+
+pseudo elementos
+::before ---> antes de
+::after ---> despues de
+::first-line
+::first-letter
+*/
+
+p::first-letter {
+  color: gold;
+}
